@@ -1,7 +1,7 @@
  $.getJSON('http://api.icndb.com/jokes/latest',function(data){            
             var index = Math.floor(Math.random() * 574);
             var get_joke = data.value[index].joke;
-            $('.joke').html("Joke : " + get_joke);
+            $('.joke').html(get_joke);
 
             $( "#button" ).click(function(){
                 index = Math.floor(Math.random() * 574);
