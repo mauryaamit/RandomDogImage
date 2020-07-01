@@ -1,3 +1,17 @@
+ $.getJSON('http://api.icndb.com/jokes/latest',function(data){            
+            console.log(data);
+            var index = Math.floor(Math.random() * 574);
+            var get_joke = data.value[index].joke;
+            $('.joke').html("Joke : " + get_joke);
+
+            $( "#button" ).click(function(){
+                index = Math.floor(Math.random() * 574);
+                get_joke = data.value[index].joke;
+                $('.joke').html("Joke : " + get_joke);
+            });
+
+            });
+
 $.getJSON('https://dog.ceo/api/breed/hound/images',function(data){
             var index1 = Math.floor(Math.random() * 1000);
             var index2 = Math.floor(Math.random() * 1000);
@@ -16,16 +30,4 @@ $.getJSON('https://dog.ceo/api/breed/hound/images',function(data){
             });
         });
 
-        $.getJSON('http://api.icndb.com/jokes/latest',function(data){            
-            console.log(data);
-            var index = Math.floor(Math.random() * 574);
-            var get_joke = data.value[index].joke;
-            $('.joke').html("Joke : " + get_joke);
-
-            $( "#button" ).click(function(){
-                index = Math.floor(Math.random() * 574);
-                get_joke = data.value[index].joke;
-                $('.joke').html("Joke : " + get_joke);
-            });
-               
-        });
+       
